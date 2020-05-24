@@ -58,3 +58,24 @@ var option1 = [" Kareem", " Wilt"];
 var option2 = [" Shaq", " Bird"];
 var option3 = [" Magic", " Pippen"];
 //////////////////////////////////////////////////
+//Add Elements to the End of an Array Using concat Instead of push//
+function concatNotPush(input) {
+   if (input === "green" || input === "Green") {
+      return array1.concat(array2);
+   } else if (input === "yellow" || input === "Yellow") {
+      return array1.concat(array3);
+   } else if (input === "purple" || input === "Purple") {
+      return array1.concat(array4);
+   } else if (input === "orange" || input === "Orange") {
+      return array1.concat(array5);
+   } else {
+      return "Please enter a different color";
+   }
+}
+var array1 = [" Red", " Blue"];
+var array2 = [" Green"];
+var array3 = [" Yellow"];
+var array4 = [" Purple"];
+var array5 = [" Orange"];
+
+//////
