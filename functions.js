@@ -78,4 +78,49 @@ var array3 = [" Yellow"];
 var array4 = [" Purple"];
 var array5 = [" Orange"];
 
-//////
+//////Use the reduce Method to Analyze DataPassed
+
+function reduceAndAccumulator(input) {
+   var numbers = [3, 4, 5, 6, 7, 8, 35, 67, input];
+   var sum = function (accumlator, currentIndexValue) {
+      return accumlator + currentIndexValue; /// starts at the 0 index - accum = 0 + current = 3 => accum = 3 + current = 4 => accum = 7 + current + 5..etc.
+   };
+   var averageNumbers = numbers.reduce(sum) / numbers.length; //The reduce method iterates over each item in an array and returns a single value
+   /// takes the array numbers and uses the reduce method to add all values together
+   /// the value is then divide by the total length of the array
+   if (input == null || input == "") {
+      // if input is empty then display error message // https://stackoverflow.com/a/21017888
+      return "Please type in a number";
+   } else {
+      return averageNumbers;
+   }
+}
+
+///Use Higher-Order Functions map, filter, or reduce to Solve a Complex Problem
+// we want to filter the array with only strings, the map the array by capitatlizing the filtered elements
+function complexProblem(input) {
+   var randomArray = [
+      3,
+      "coding",
+      4,
+      "tyler",
+      true,
+      ,
+      5,
+      null,
+      false,
+      "cat",
+      input,
+   ];
+   let justStrings = randomArray
+      .filter(function (strings) {
+         if (typeof strings == "string") {
+            return strings; /// after console logging, can confirm that this filters out the strings
+         }
+      })
+      .map(function (strings) {
+         /// will take the newly adjusted array and manipulate it
+         return strings.toUpperCase(); // all strings will be capitalized
+      });
+   return justStrings; // returns the array justStrings which should only have capitalized strings
+}
