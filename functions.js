@@ -155,7 +155,7 @@ function splittingString(input) {
    var secondSplit = "I-love)to(eat%Food";
    var thirdSplit = "Nice2to8meet3you";
    if (input == 1) {
-      return firstSplit.split(/\W/); // splits all symbols and punctuations
+      return firstSplit.split(/\W/); // splits all symbols and punctuations //TODO ask if you can use multiple
    } else if (input == 2) {
       return secondSplit.split(/\W/); //splits all symbols and punctuations
    } else if (input == 3) {
@@ -165,4 +165,18 @@ function splittingString(input) {
    }
 }
 
-////
+////Combine an Array into a String Using the join Method
+function joiningString(input) {
+   var firstJoin = "The dog.jumped-over$the fence";
+   var secondJoin = "I-love)to(eat%Food";
+   var thirdJoin = "Nice2to8meet3you";
+   if (input == 1) {
+      return firstJoin.split(/\W/).join(" "); // splits all symbols and punctuations
+   } else if (input == 2) {
+      return secondJoin.split(/\W/).join(" "); //splits all symbols and punctuations
+   } else if (input == 3) {
+      return thirdJoin.split(/\d/).join(" "); // splits all digits
+   } else {
+      return "please type a number between 1-3";
+   }
+}
