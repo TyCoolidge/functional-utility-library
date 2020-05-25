@@ -215,7 +215,7 @@ function convertToUrl(input) {
          .split(/\d/) ///split all numbers out of array
          .filter(function (filtertingOutNumbers) {
             if (filtertingOutNumbers !== /\d/) {
-               //if string is not equal to a number than remove and place in new array
+               //if string is not equal to a number than remove and place in new arrayß
                return filtertingOutNumbers;
             }
          })
@@ -223,4 +223,21 @@ function convertToUrl(input) {
    } else {
       return "please type a number between 1-3";
    }
+}
+
+////using the every method
+function checkString(inputNum) {
+   var checkArray = [3, 499, 455, 234, 4, 5, 12, inputNum];
+   return checkArray.every(function (lessThanFive) {
+      // checks if every element in the string us a number that is less than 500
+      return lessThanFive < 500;
+   });
+}
+
+///using the some method
+function someArray(input) {
+   var multipleArray = [3, 9, 27, 36, input];
+   return multipleArray.some(function (divisibleThree) {
+      return divisibleThree % 5 == 0;
+   });
 }
