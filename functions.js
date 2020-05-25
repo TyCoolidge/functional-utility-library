@@ -124,3 +124,15 @@ function complexProblem(input) {
       });
    return justStrings; // returns the array justStrings which should only have capitalized strings
 }
+// Sort an Array Alphabetically using the sort Method-->
+
+function abcOrder(input) {
+   var abcOrder = [" Tom", " Jim", " Emily", " Bob", " Sam", " " + input];
+   return abcOrder.sort(function (a, b) {
+      return a === b ? 0 : a > b ? 1 : -1;
+   });
+}
+// if (input !== input.toUpperCase()) {
+//    return input.charAt(0).toUpperCase() + input.slice(1); // if user input is a lowercase string, the first letter will return Uppercase, followed by the rest of the string //https://stackoverflow.com/a/1026087
+// }
+//TODO add this to function
