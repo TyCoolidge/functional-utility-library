@@ -180,3 +180,47 @@ function joiningString(input) {
       return "please type a number between 1-3";
    }
 }
+
+//Changing to Url
+function convertToUrl(input) {
+   var convert1 = "Free/Code%Camp&Functional[Programming";
+   var convert2 = "Turn this into a website url";
+   var convert3 = "We7love8to4program";
+
+   if (input === 1) {
+      // if user types 1
+      return convert1
+         .toLowerCase() //converts everything in strong to lowercase
+         .split(/\W/) // splits  all symbols and punctuations
+         .filter(function (filtering) {
+            // filters out the spaces so the return won't include: [" ", "string"]
+            if (filtering !== /\W/) {
+               return filtering; //if string is not  all symbols and punctuations then remove and place in new array
+            }
+         })
+         .join("-"); //joins together all strings with a hyphen in between
+   } else if (input == 2) {
+      return convert2
+         .toLowerCase()
+         .split(" ")
+         .filter(function (filtertingAgain) {
+            if (filtertingAgain !== " ") {
+               return filtertingAgain;
+            }
+         })
+         .join("-");
+   } else if (input == 3) {
+      return convert3
+         .toLowerCase()
+         .split(/\d/) ///split all numbers out of array
+         .filter(function (filtertingOutNumbers) {
+            if (filtertingOutNumbers !== /\d/) {
+               //if string is not equal to a number than remove and place in new array
+               return filtertingOutNumbers;
+            }
+         })
+         .join("-");
+   } else {
+      return "please type a number between 1-3";
+   }
+}
