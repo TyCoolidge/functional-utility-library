@@ -136,3 +136,33 @@ function abcOrder(input) {
 //    return input.charAt(0).toUpperCase() + input.slice(1); // if user input is a lowercase string, the first letter will return Uppercase, followed by the rest of the string //https://stackoverflow.com/a/1026087
 // }
 //TODO add this to function
+
+//Return a Sorted Array Without Changing the Original Array
+
+function doNotChangeArr(input) {
+   var globalArray = [30, 45, 65, -4, -2, 43, input];
+   var empty = [];
+   return globalArray.concat(empty).sort(function (a, b) {
+      // To compare numbers instead of strings, the compare function can simply subtract b from a.
+      return a - b; // the array will sort the numbers in ascending order
+   });
+}
+
+//Split a String into an Array Using the split Method
+
+function splittingString(input) {
+   var firstSplit = "The dog.jumped-over$the fence";
+   var secondSplit = "I-love)to(eat%Food";
+   var thirdSplit = "Nice2to8meet3you";
+   if (input == 1) {
+      return firstSplit.split(/\W/); // splits all symbols and punctuations
+   } else if (input == 2) {
+      return secondSplit.split(/\W/); //splits all symbols and punctuations
+   } else if (input == 3) {
+      return thirdSplit.split(/\d/); // splits all digits
+   } else {
+      return "please type a number between 1-3";
+   }
+}
+
+////
